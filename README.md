@@ -113,7 +113,7 @@ public String GradeCalculator(double index){
 
 - Refactoring: create enum class to collect all readability level.
 ```java
-public enum Grade {
+public enum ReadabilityLevel {
     INDEX_100("4th grade student (elementary school)", 101),
     INDEX_90("5th grade student", 90),
     INDEX_80("6th grade student", 80),
@@ -126,22 +126,22 @@ public enum Grade {
     INDEX_MINUS("Advance degree graduate", -1);
 
 
-    private final String gradeText;
-    private final int gradeValue;
+    private final String levelText;
+    private final int levelValue;
 
 
-    private Grade(String gradeText, int gradeValue) {
-        this.gradeText = gradeText;
-        this.gradeValue = gradeValue;
+    private ReadabilityLevel(String levelText, int levelValue) {
+        this.levelText = levelText;
+        this.levelValue = levelValue;
     }
 
-    public String getGradeText() {
-        return this.gradeText;
+    public String getLevelText() {
+        return this.levelText;
     }
 
-    public static Grade getGrade(double points) {
-        for (Grade g : Grade.values()) {
-            if (points >= g.gradeValue) {
+    public static ReadabilityLevel getLevel(double index) {
+        for (ReadabilityLevel g : ReadabilityLevel.values()) {
+            if (index >= g.levelValue) {
                 return g;
             }
         }
@@ -152,7 +152,7 @@ public enum Grade {
 - Refactoring: make GradeCalculator in FleschReadability class use Grade enum.
 ```java
 public String GradeCalculator(double index){
-          return Grade.getGrade(index).getGradeText();
+          return ReadabilityLevel.getLevel(index).getLevelText();
     }
 ```
 - Refactoring: rename method.```GradeCalculator``` violates the Java naming convention.
