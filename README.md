@@ -12,7 +12,7 @@ and in ```/src/readability/CountWord.java``` class
 
 https://github.com/Raikirieiei/PA4-Readability/blob/master/src/readability/CountSyllable.java
 
-consider this code
+consider this code:
 ```
 private boolean IsVowel(String alphabet) {
      return (alphabet.equalsIgnoreCase("a") || alphabet.equalsIgnoreCase("e") || alphabet.equalsIgnoreCase("i")
@@ -24,7 +24,7 @@ private boolean IsVowel(String alphabet) {
     - equation is long and complex.
     - duplicate method in two class.
     
-- Refactoring: introduce named constant for the vowels
+- Refactoring: introduce named constant for the vowels.
 
 ```
 private boolean IsVowel(String alphabet){
@@ -71,10 +71,10 @@ public double IndexCalculator(String source){
         return readabilityIndex;
 ```
 - Refactoring Signs:
-    - hard to understand the Flesch index formula
-    - have unnecessary temporary variable that’s assigned the result of a simple expression
+    - hard to understand the Flesch index formula.
+    - have unnecessary temporary variable that’s assigned the result of a simple expression.
     
-- Refactoring: Replace the references to the variable with the expression itself.
+- Refactoring: replace the references to the variable with the expression itself.
 ```
 public double IndexCalculator(String source){
         ReadAndCount read = new ReadAndCount();
@@ -149,7 +149,7 @@ public enum Grade {
     }
 }
 ```
-- Refactoring:make GradeCalculator in FleschReadability use Grade enum.
+- Refactoring: make GradeCalculator in FleschReadability class use Grade enum.
 ```
 public String GradeCalculator(double index){
           return Grade.getGrade(index).getGradeText();
