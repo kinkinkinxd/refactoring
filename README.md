@@ -52,7 +52,7 @@ public class CountWord extends Count implements CountStrategy {
 ```
 public boolean isVowel(String word){
 ```
-### FleschReadability
+## FleschReadability
 **IndexCalculator methods**
 
 In the ```src/readability/FleschReadability.java```
