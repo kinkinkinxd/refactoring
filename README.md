@@ -114,7 +114,7 @@ public String GradeCalculator(double index){
 - Refactoring: create enum class to collect all readability level.
 ```java
 public enum ReadabilityLevel {
-    INDEX_100("4th grade student (elementary school)", 101),
+    INDEX_100("4th grade student (elementary school)", 100),
     INDEX_90("5th grade student", 90),
     INDEX_80("6th grade student", 80),
     INDEX_70("7th grade student", 70),
@@ -141,7 +141,7 @@ public enum ReadabilityLevel {
 
     public static ReadabilityLevel getLevel(double index) {
         for (ReadabilityLevel g : ReadabilityLevel.values()) {
-            if (index >= g.levelValue) {
+            if (index > g.levelValue) {
                 return g;
             }
         }
