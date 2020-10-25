@@ -2,7 +2,7 @@
 ## CountWord and CountSyllable
 From Thornthep's Readablity code: https://github.com/Raikirieiei/PA4-Readability
 
-**IsVowel methods**
+**IsVowel() method**
 
 In the ```/src/readability/CountSyllable.java``` class
 
@@ -53,7 +53,7 @@ public class CountWord extends Count implements CountStrategy {
 public boolean isVowel(String word){
 ```
 ## FleschReadability
-**IndexCalculator methods**
+**IndexCalculator() method**
 
 In the ```src/readability/FleschReadability.java```
 
